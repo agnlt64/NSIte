@@ -1,7 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-.header{
+:root{
+    --header-width: 20em;
+}
+*{
     font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    background-color: #585757;
+    height: var(--header-width);
+}
+.nav ul li a{
+    text-decoration: none;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul{
+    display: flex;
+    padding: 1em;
+    gap: 5em;
 }
 .nav{
-    
+    padding-top: calc(var(--header-width) - 3em);
 }
