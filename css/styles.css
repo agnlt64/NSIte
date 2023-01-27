@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    --header-width: 30em;
+    --header-width: 20em;
+    --main-color:  #0e89be;
+    --rounded: 8px;
 }
 
 * {
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -15,7 +18,7 @@ a {
 }
 
 .header {
-    background-color: #007bff;
+    background-color: var(--main-color);
     height: var(--header-width);
     color: #fff;
 }
@@ -23,15 +26,8 @@ a {
 .title {
     display: flex;
     justify-content: center;
-    margin-top: calc(var(--header-width) / 8);
+    margin-top: calc(var(--header-width) / 10);
     font-size: 2em;
-}
-
-@media(max-width: 50em) {
-    .title {
-        font-size: 1em;
-    }
-
 }
 
 .nav {
@@ -50,6 +46,17 @@ a {
     transition: 0.2s ease;
 }
 
+.nav ul li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    transition: 0.2s;
+}
+
+.nav ul li:hover::after {
+    background-color: #fff;
+}
+
 .nav ul li:hover {
     transform: translateY(-8px);
 }
@@ -60,4 +67,48 @@ a {
 
 .nav ul li a:hover {
     text-decoration: solid;
+}
+
+.main {
+    display: flex;
+    text-align: justify;
+    gap: 6em;
+    margin-right: 20%;
+    margin-left: 5em;
+}
+
+.goto-menu {
+    background-color: var(--main-color);
+    font-size: large;
+    height: min-content;
+    padding:2em 3em;
+    margin-top: 4em;
+    border-radius: var(--rounded);
+}
+
+.goto-menu ul li {
+    list-style: none;
+    padding: 0.5em;
+    transition: 0.2s;
+}
+
+.goto-menu ul li::after {
+    content: "";
+    display: block;
+    height: 1px;
+    padding: 0 4em 2px;
+    transition: 0.2s;
+}
+
+.goto-menu ul li:hover {
+    transform: translateX(-8px);
+}
+
+.goto-menu ul li:hover::after {
+    background-color: #fff;
+    transform: translateX(15px);
+}
+
+.goto-menu ul li a {
+    text-decoration: none;
 }
