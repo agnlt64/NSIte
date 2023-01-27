@@ -27,7 +27,10 @@ a {
     font-size: 2em;
 }
 
-@media(min-width: 900px) {
+@media(max-width: 50em) {
+    .title {
+        font-size: 1em;
+    }
 
 }
 
