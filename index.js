@@ -1,8 +1,8 @@
 // Récupération des éléments de formulaire
-const mathInput = document.querySelector('.Mathematiques input');
-const pcInput = document.querySelector('.Phyisque-Chimie input');
-const techInput = document.querySelector('.Technologie input');
-const resultat = document.querySelector('#resultat');
+const mathInput = document.querySelector('.mathInput');
+const pcInput = document.querySelector('.pcInput');
+const techInput = document.querySelector('.techInput');
+const resultat = document.querySelector('finalButton');
 
 // Récupération des boutons de calcul
 const mathButton = document.querySelector('.mathButton');
