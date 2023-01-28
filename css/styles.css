@@ -40,7 +40,6 @@ a {
     box-shadow: 1px 1.2px 1px var(--discret-color);
 }
 
-/* index.html */
 .header {
     background-color: var(--main-color);
     height: var(--header-width);
@@ -93,7 +92,20 @@ a {
     text-decoration: solid;
 }
 
-.main {
+/* index.html */
+/* see jeu.css for more styling */
+.main-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left {
+    margin-right: auto;
+}
+
+/* presentation.html */
+.main-presentation {
     display: flex;
     text-align: justify;
     gap: 6em;
