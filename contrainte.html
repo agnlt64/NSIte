@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Contrainte</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="nav">
@@ -21,28 +23,32 @@
                     <a href="contact.html">Contact</a>
                 </li>
                 <li>
-                    <a href="contrainte.html">Page contrainte</a>
+                    <a href="#">Page contrainte</a>
                 </li>
             </ul>
         </nav>
+        <div class="title">
+            <h1>Contrainte</h1>
+        </div>
     </header>
-    <h1>Contrainte</h1>
-    <p>
-        Vous devez rentrer vos notes dans chaque catégorie pour savoir si vous êtes aptes à rentrer en classe de NSI
-    </p>
-    <main class="Mathématiques">
-        <h1>Mathématiques</h1>
-        <input type="text">
+
+    <main class="main-contrainte">
+        <h3 class="subtitle">Vous devez rentrer vos notes dans chaque catégorie pour vérifier si vous êtes aptes à rentrer en classe de NSI.</h3>
+
+        <form class="form" method="post">
+            <label for="maths">Mathématiques</label>
+            <input type="text" name="maths" placeholder="Moyenne de maths..." required>
+            <label for="physique">Physique Chimie</label>
+            <input type="text" name="physique" placeholder="Moyenne de physique..." required>
+            <label for="snt">Sciences Numériques et Technologiques</label>
+            <input type="text" name="snt" placeholder="Moyenne de SNT" required>
+            <button class="btn">Calculer la moyenne</button>
+        </form>
+        <div id="moyenne"></div>
     </main>
-    <main class="Phyisque-Chimie">
-        <h1>Phyisque-Chimie</h1>
-        <input type="text">
-    </main>
-    <main class="Technologie">
-        <h1>Technologie</h1>
-        <input type="text">
-    </main>
-    <button class="button">Calculer moyenne</button>
+
+    <footer class="footer"></footer>
 </body>
 <script src="js/index.js"></script>
+
 </html>
