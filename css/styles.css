@@ -25,6 +25,10 @@ a {
     color: #fff;
 }
 
+iframe {
+    overflow: visible;
+}
+
 .btn {
     border-radius: 5px;
     border: none;
@@ -37,7 +41,6 @@ a {
 .btn:hover {
     cursor: pointer;
     background-color: var(--accent-color);
-    box-shadow: 1px 1.2px 1px var(--discret-color);
 }
 
 .header {
