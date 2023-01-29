@@ -74,14 +74,15 @@ input {
 }
 
 .nav {
+    display: flex;
+    justify-content: center;
     font-size: large;
-    padding: 0 30em 0 30em;
 }
 
 .nav ul {
     display: flex;
     padding: 1.7em 0;
-    justify-content:space-evenly;
+    gap: 2em;
 }
 
 .nav ul li {
