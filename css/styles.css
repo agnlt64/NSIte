@@ -25,8 +25,25 @@ a {
     color: #fff;
 }
 
-iframe {
-    overflow: visible;
+input {
+    border-radius: calc(var(--rounded) / 2);
+    outline: none;
+    border: 1px solid var(--discret-color);
+    padding: 13px 15px;
+    font-size: 16px;
+    height: 18px;
+}
+
+.progress-bar {
+    position: fixed;
+    width: 100%;
+    height: 0.5vh;
+}
+
+.filled {
+    width: 0;
+    height: 100%;
+    background-color: #fff;
 }
 
 .btn {
@@ -121,7 +138,7 @@ iframe {
     font-size: large;
     height: min-content;
     padding:2em 3em;
-    margin: 4em 0 0 -17%;
+    margin: 1em 0 0 -17%;
     border-radius: var(--rounded);
     position: fixed;
 }
@@ -146,6 +163,34 @@ iframe {
     margin: 0 4em;
 }
 
+@keyframes slide {
+    50% {
+        width: 30%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes unslide {
+    0% {
+        width: 60%;
+    }
+    50% {
+        width: 30%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.line {
+    height: 2px;
+    width: 0;
+    margin-left: 10px;
+    background-color: #fff;
+}
+
 /* contrainte.html */
 .main-contrainte {
     display: flex;
@@ -157,15 +202,6 @@ iframe {
 .form {
     display: flex;
     flex-direction: column;
-}
-
-.form input {
-    border-radius: calc(var(--rounded) / 2);
-    outline: none;
-    border: 1px solid var(--discret-color);
-    padding: 13px 15px;
-    font-size: 16px;
-    height: 18px;
 }
 
 .form label {
@@ -180,4 +216,35 @@ iframe {
 .subtitle {
     margin-top: 1em;
     font-weight: normal;
+}
+
+/* contact.html */
+.main-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.main-contact h3 {
+    margin-top: 1em;
+}
+
+.main-contact input {
+    width: 20%;
+}
+
+.main-contact textarea {
+    font-family: inherit;
+    width: 20%;
+    border-radius: var(--rounded);
+    border: 1px solid var(--discret-color);
+    padding: 13px 15px;
+    outline: none;
+    resize: vertical;
+    max-height: 25em;
+}
+
+.main-contact button {
+    width: 21.5%;
 }
