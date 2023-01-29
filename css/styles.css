@@ -118,10 +118,11 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 20% 0 20%;
 }
 
-.left {
-    margin-right: auto;
+.project-title {
+    margin: 2rem 0 1rem;
 }
 
 /* presentation.html */
@@ -129,8 +130,7 @@ input {
     display: flex;
     text-align: justify;
     gap: 6em;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin: 0 20% 0 20%;
 }
 
 .goto-menu {
