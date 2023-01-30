@@ -219,6 +219,25 @@ input {
     font-weight: normal;
 }
 
+.moyenne {
+    --red-color: #d31a00;
+    --orange-color: #f5c400;
+    --green-color: #35ae1a;
+    font-weight: bold;
+}
+
+.moyenne[red] {
+    color: var(--red-color);
+}
+
+.moyenne[orange] {
+    color: var(--orange-color);
+}
+
+.moyenne[green] {
+    color: var(--green-color);
+}
+
 /* contact.html */
 .main-contact {
     display: flex;
