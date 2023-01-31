@@ -30,13 +30,19 @@
         </div>
     </header>
 
-    <main class="main-contact">
-        <h3>Envoyez nous un mail</h3>
-        <input type="text" placeholder="Objet...">
-        <textarea name="email-body" cols="30" rows="10"></textarea>
-        <button class="btn">Envoyer</button>
-    </main>
+<section id="contact">
+    <div class="container">
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Entrez votre nom..." required="">
+            <input type="text" name="email" placeholder="Entrez votre mail..." required="">
+            <input type="text" name="subject" placeholder="Objet du message..." required="">
+            <textarea name="message" placeholder="Entrez votre message..."></textarea>
+            <button type="submit" id="button">Envoyer</button>
+        </form>
+    </div>
+</section>
 
-    <footer class="footer"></footer>
+</div>
 </body>
+<script src="index.js"></script>
 </html>
