@@ -1,0 +1,65 @@
+/* presentation.html */
+.main-presentation {
+    display: flex;
+    text-align: justify;
+    gap: 6em;
+    margin: 0 20% 0 20%;
+}
+
+.goto-menu {
+    background-color: var(--main-color);
+    font-size: large;
+    height: min-content;
+    padding:2em 3em;
+    margin: 1em 0 0 -17%;
+    border-radius: var(--rounded);
+    position: fixed;
+}
+
+.goto-menu ul li {
+    list-style: none;
+    padding: 0.5em;
+    transition: 0.2s;
+}
+
+.goto-menu ul li:hover {
+    transform: translateX(-15px);
+}
+
+.goto-menu ul li a {
+    text-decoration: none;
+}
+
+.goto-menu ul li a::after {
+    content: "";
+    display: block;
+    margin: 0 4em;
+}
+
+@keyframes slide {
+    50% {
+        width: 30%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes unslide {
+    0% {
+        width: 60%;
+    }
+    50% {
+        width: 30%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.line {
+    height: 2px;
+    width: 0;
+    margin-left: 10px;
+    background-color: #fff;
+}

@@ -1,0 +1,45 @@
+/* contrainte.html */
+.main-contrainte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    font-size: large;
+    margin-top: 1em;
+}
+
+.form button {
+    margin-top: 1em;
+}
+
+.subtitle {
+    margin-top: 1em;
+    font-weight: normal;
+}
+
+.moyenne {
+    --red-color: #d31a00;
+    --orange-color: #f5c400;
+    --green-color: #35ae1a;
+    font-weight: bold;
+}
+
+.moyenne[red] {
+    color: var(--red-color);
+}
+
+.moyenne[orange] {
+    color: var(--orange-color);
+}
+
+.moyenne[green] {
+    color: var(--green-color);
+}

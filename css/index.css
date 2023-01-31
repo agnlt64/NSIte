@@ -1,0 +1,12 @@
+/* index.html */
+/* see jeu.css for more styling */
+.main-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20% 0 20%;
+}
+
+.project-title {
+    margin: 2rem 0 1rem;
+}
