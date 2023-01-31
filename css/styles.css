@@ -268,3 +268,74 @@ input {
 .main-contact button {
     width: 21.5%;
 }
+.footer{
+    background-color: #0b648a;
+    height: 50px;
+    text-align: center;
+    padding: 0px 15px;
+}
+section#contact{
+    background-color: #f9f9fb;
+    padding: 100px 0;
+}
+section#contact .container{
+    max-width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 30px 10px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px -10px #d6d6d6;
+}
+section#contact .container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-between;
+    max-width: 600px;
+}
+section#contact .container form input {
+    width: 50%;
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e4e4ec;
+    transition: 0.2s;
+
+}
+section#contact .container form textarea {
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e4e4ec;
+    transition: 0.2s;
+    height: 100px;
+}
+section#contact .container form button{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1fb3bf;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-top: 30px;
+}
+section#contact .container form input:hover{
+    border-bottom: 2px solid #1fb3bf;
+}
+section#contact .container form textarea:hover{
+    border-bottom: 2px solid #1fb3bf;
+}
+section#contact .container form button:hover{
+    transform: translateY(-5px);
+    box-shadow: rgb(214, 214, 214) 0px 10px 40px 0px;
+}
