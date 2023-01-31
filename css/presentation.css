@@ -1,3 +1,11 @@
+:root {
+    --header-width: 20em;
+    --main-color:  #0e89be;
+    --accent-color: #0b648a;
+    --discret-color: #787a7c;
+    --rounded: 8px;
+}
+
 /* presentation.html */
 .main-presentation {
     display: flex;

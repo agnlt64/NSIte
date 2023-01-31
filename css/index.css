@@ -1,3 +1,11 @@
+:root {
+    --header-width: 20em;
+    --main-color:  #0e89be;
+    --accent-color: #0b648a;
+    --discret-color: #787a7c;
+    --rounded: 8px;
+}
+
 /* index.html */
 /* see jeu.css for more styling */
 .main-game {
@@ -9,4 +17,16 @@
 
 .project-title {
     margin: 2rem 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .main-game {
+        margin: 0 5% 0 5%;
+    }
+}
+
+@media (min-width: 576px) {
+    .main-game {
+        margin: 0;
+    }
 }
