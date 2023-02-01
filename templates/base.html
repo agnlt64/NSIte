@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block style %} {% endblock %}
+</head>
+
+<body>
+    <header class="header">
+        <div class="progress-bar">
+            <div class="filled"></div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="/">Accueil</a>
+                </li>
+                <li>
+                    <a href="/presentation">Présentation</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+                <li>
+                    <a href="/contrainte">Page contrainte</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>{% block nav_title %}{% endblock %}</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        {% block footer %}{% endblock %}
+    </footer>
+</body>
+{% block scripts %}{% endblock %}
+</html>

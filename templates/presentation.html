@@ -1,203 +1,180 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/presentation.css">
-</head>
-<body>
-    <header class="header">
-        <div class="progress-bar">
-            <div class="filled"></div>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li>
-                    <a href="index.html">Accueil</a>
-                </li>
-                <li>
-                    <a href="presentation.html">Présentation</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-                <li>
-                    <a href="contrainte.html">Page contrainte</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="title">
-            <h1>Présentation de la spécialité NSI</h1>
-        </div>
-    </header>
-    
-    <main class="main-presentation">
-        <div class="goto-menu" id="goto-menu">
-            <ul>
-                <li>
-                    <a href="#cest-quoi">C'est quoi ?</a>
-                </li>
-                <div class="line"></div>
-                <li>
-                    <a href="#apprentissage">Qu'y apprend-on ?</a>
-                </li>
-                <div class="line"></div>
-                <li>
-                    <a href="#details">Quelques détails</a>
-                </li>
-                <div class="line"></div>
-                <li>
-                    <a href="#metiers">Débouchés</a>
-                </li>
-                <div class="line"></div>
-            </ul>
-        </div>
+{% extends "base.html" %}
 
-        <section class="content">
-            <h3 id="cest-quoi">
-                La spécialité numérique et sciences informatiques, c'est quoi ?
-            </h3>
+{% block title %}
+Présentation de la spécialité NSI
+{% endblock %}
 
-            <p>
-                Aujourd'hui, le numérique, c'est de la culture générale, nécessaire pour votre vie personnelle comme
-                professionnelle. Pour travailler dans le développement durable, la littérature, le cinéma ou la santé,
-                c'est
-                toujours bien de savoir ce qu'est un algorithme, un langage de programmation, une base de données. C'est
-                d'ailleurs pour cette raison que tous les élèves de 2de suivent un cours de Sciences Numériques et
-                Technologiques.
-            </p>
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/presentation.css') }}">
+{% endblock %}
 
-            <p>
-                La spécialité Numérique et sciences informatiques vous permet de comprendre les bases de la
-                programmation,
-                pour
-                élaborer des logiciels par exemple, des sites internet, des applications pour smartphones, etc.
-            </p>
+{% block nav_title %}
+Présentation de la spécialité NSI
+{% endblock %}
 
-            <h3 id="apprentissage">
-                Concrètement, qu'apprend-on en NSI ?
-            </h3>
+{% block content %}
+<div class="goto-menu" id="goto-menu">
+    <ul>
+        <li>
+            <a href="#cest-quoi">C'est quoi ?</a>
+        </li>
+        <div class="line"></div>
+        <li>
+            <a href="#apprentissage">Qu'y apprend-on ?</a>
+        </li>
+        <div class="line"></div>
+        <li>
+            <a href="#details">Quelques détails</a>
+        </li>
+        <div class="line"></div>
+        <li>
+            <a href="#metiers">Débouchés</a>
+        </li>
+        <div class="line"></div>
+    </ul>
+</div>
 
-            <p>
-                Le programme de NSI est très concret : vous allez travailler en petits groupes sur des projets, des
-                défis
-                logiques à résoudre avec les langages de programmation les plus utilisés en informatique. En général, ce
-                sera
-                Python (très utilisé pour les robots et les jeux vidéo), mais vous verrez aussi HTML, CSS et Javascript
-                qui
-                sont
-                les trois langages de quasiment tous les sites internet, et SQL qui est utilisé pour les grosses bases
-                de
-                données.
-            </p>
+<h3 id="cest-quoi">
+    La spécialité numérique et sciences informatiques, c'est quoi ?
+</h3>
 
-            <p>
-                Quand on code, on rate et on corrige ! Et c'est comme ça que vous travaillerez avec vos professeurs sur
-                vos
-                projets : c'est en faisant des erreurs qu'on apprend, et vous devrez améliorer vos programmes au fur et
-                à
-                mesure
-                pour qu'ils vous obéissent au doigt et à l'œil.
-            </p>
+<p>
+    Aujourd'hui, le numérique, c'est de la culture générale, nécessaire pour votre vie personnelle comme
+    professionnelle. Pour travailler dans le développement durable, la littérature, le cinéma ou la santé,
+    c'est
+    toujours bien de savoir ce qu'est un algorithme, un langage de programmation, une base de données. C'est
+    d'ailleurs pour cette raison que tous les élèves de 2de suivent un cours de Sciences Numériques et
+    Technologiques.
+</p>
 
-            <h3 id="details">
-                Détails du programme de la spécialité NSI
-            </h3>
+<p>
+    La spécialité Numérique et sciences informatiques vous permet de comprendre les bases de la
+    programmation,
+    pour
+    élaborer des logiciels par exemple, des sites internet, des applications pour smartphones, etc.
+</p>
 
-            <p>
-                Est-ce qu'on peut prendre NSI avec n'importe quelles spécialités ?
+<h3 id="apprentissage">
+    Concrètement, qu'apprend-on en NSI ?
+</h3>
 
-                Oui bien sûr ! Aujourd'hui dans toutes les disciplines on utilise des logiciels qui demandent des
-                connaissances
-                en informatique. En choisissant NSI, vous prenez un temps d'avance, et vous vous préparez à de nombreux
-                métiers
-                en pleine transformation avec le numérique.
-            </p>
+<p>
+    Le programme de NSI est très concret : vous allez travailler en petits groupes sur des projets, des
+    défis
+    logiques à résoudre avec les langages de programmation les plus utilisés en informatique. En général, ce
+    sera
+    Python (très utilisé pour les robots et les jeux vidéo), mais vous verrez aussi HTML, CSS et Javascript
+    qui
+    sont
+    les trois langages de quasiment tous les sites internet, et SQL qui est utilisé pour les grosses bases
+    de
+    données.
+</p>
 
-            <p>
-                Récemment, des égyptologues ont construit un logiciel pour aider à traduire les hiéroglyphes : ce sont
-                des
-                historiens qui ont de grandes connaissances en informatique. La programmation n'est plus réservée
-                seulement
-                aux
-                mathématiques et à la physique aujourd'hui, on l'utilise dans tous les domaines : cinéma, économie,
-                services
-                à
-                la personne, développement durable…
-            </p>
+<p>
+    Quand on code, on rate et on corrige ! Et c'est comme ça que vous travaillerez avec vos professeurs sur
+    vos
+    projets : c'est en faisant des erreurs qu'on apprend, et vous devrez améliorer vos programmes au fur et
+    à
+    mesure
+    pour qu'ils vous obéissent au doigt et à l'œil.
+</p>
 
-            <h3 id="metiers">
-                Quels sont les débouchés, quelles études, quels métiers ?
-            </h3>
+<h3 id="details">
+    Détails du programme de la spécialité NSI
+</h3>
 
-            <p>
-                La spécialité NSI vous donne de bonnes bases en informatique. Selon vos goûts et vos projets d'études et
-                de
-                vie
-                professionnelle, vous pourrez décider de coupler cette compétence à un autre domaine de spécialisation,
-                ou
-                bien
-                même d'en faire le cœur de votre métier.
-            </p>
+<p>
+    Est-ce qu'on peut prendre NSI avec n'importe quelles spécialités ?
 
-            <p>
-                Aujourd'hui, il y a dans tous les domaines des experts dont le métier est d'être à la pointe des outils
-                informatiques de leur secteur : santé, communication, bâtiment, marketing, industrie.
+    Oui bien sûr ! Aujourd'hui dans toutes les disciplines on utilise des logiciels qui demandent des
+    connaissances
+    en informatique. En choisissant NSI, vous prenez un temps d'avance, et vous vous préparez à de nombreux
+    métiers
+    en pleine transformation avec le numérique.
+</p>
 
-                Par exemple, il existe aujourd'hui des spécialistes de la bio-impression, qui créent des prothèses
-                chirurgicales
-                en utilisant des imprimantes 3D : c'est un métier qui demande des connaissances en chirurgie autant
-                qu'en
-                ingénierie informatique.
-            </p>
+<p>
+    Récemment, des égyptologues ont construit un logiciel pour aider à traduire les hiéroglyphes : ce sont
+    des
+    historiens qui ont de grandes connaissances en informatique. La programmation n'est plus réservée
+    seulement
+    aux
+    mathématiques et à la physique aujourd'hui, on l'utilise dans tous les domaines : cinéma, économie,
+    services
+    à
+    la personne, développement durable…
+</p>
 
-            <p>
-                Ou encore dans la communication, les social media managers, qui sont responsables de l'ensemble des
-                réseaux
-                sociaux pour une entreprise, sont formés en sociologie et en littérature, autant qu'en informatique.
+<h3 id="metiers">
+    Quels sont les débouchés, quelles études, quels métiers ?
+</h3>
 
-                Ensuite, le numérique est aujourd'hui un domaine d'activité à part entière, donc il y a toute une série
-                de
-                métiers qui se consacrent à son fonctionnement : des économistes, des juristes, des journalistes, etc.
-                qui
-                sont
-                spécialistes du numérique. Ces experts ont toujours une formation qui allie une discipline classique
-                avec
-                une
-                forte connaissance de l'informatique.
+<p>
+    La spécialité NSI vous donne de bonnes bases en informatique. Selon vos goûts et vos projets d'études et
+    de
+    vie
+    professionnelle, vous pourrez décider de coupler cette compétence à un autre domaine de spécialisation,
+    ou
+    bien
+    même d'en faire le cœur de votre métier.
+</p>
 
-                Enfin, si vous voulez faire de l'informatique pure et dure, vous vous orienterez progressivement vers
-                des
-                métiers comme développeur : spécialiste des langages informatique, il traduit un problème en une
-                séquence de
-                tâches que l'ordinateur va exécuter.
-            </p>
+<p>
+    Aujourd'hui, il y a dans tous les domaines des experts dont le métier est d'être à la pointe des outils
+    informatiques de leur secteur : santé, communication, bâtiment, marketing, industrie.
 
-            <p>
-                Plusieurs parcours d'études supérieures préparent spécifiquement à ces métiers :
-            </p>
+    Par exemple, il existe aujourd'hui des spécialistes de la bio-impression, qui créent des prothèses
+    chirurgicales
+    en utilisant des imprimantes 3D : c'est un métier qui demande des connaissances en chirurgie autant
+    qu'en
+    ingénierie informatique.
+</p>
 
-            <ul>
-                <li>Les universités en informatique</li>
-                <li>Les écoles d'ingénieur post-bac</li>
-                <li>Les classes prépa, avec une nouvelle section MPI (Maths-Physique-Informatique)</li>
-                <li>Les IUT</li>
-            </ul>
+<p>
+    Ou encore dans la communication, les social media managers, qui sont responsables de l'ensemble des
+    réseaux
+    sociaux pour une entreprise, sont formés en sociologie et en littérature, autant qu'en informatique.
 
-            <p>
-                Si vous êtes intéressés par ces carrières, sachez que c'est un domaine où on fait beaucoup de
-                mathématiques.
-                Pour suivre ces formations, il est conseillé de prendre aussi la spécialité mathématiques en première,
-                et de
-                continuer en terminale avec la spécialité ou bien l'option mathématiques complémentaires.
+    Ensuite, le numérique est aujourd'hui un domaine d'activité à part entière, donc il y a toute une série
+    de
+    métiers qui se consacrent à son fonctionnement : des économistes, des juristes, des journalistes, etc.
+    qui
+    sont
+    spécialistes du numérique. Ces experts ont toujours une formation qui allie une discipline classique
+    avec
+    une
+    forte connaissance de l'informatique.
 
-            </p>
-        </section>
-    </main>
-</body>
-<script src="js/scroll.js"></script>
-<script src="js/underline.js"></script>
-</html>
+    Enfin, si vous voulez faire de l'informatique pure et dure, vous vous orienterez progressivement vers
+    des
+    métiers comme développeur : spécialiste des langages informatique, il traduit un problème en une
+    séquence de
+    tâches que l'ordinateur va exécuter.
+</p>
+
+<p>
+    Plusieurs parcours d'études supérieures préparent spécifiquement à ces métiers :
+</p>
+
+<ul>
+    <li>Les universités en informatique</li>
+    <li>Les écoles d'ingénieur post-bac</li>
+    <li>Les classes prépa, avec une nouvelle section MPI (Maths-Physique-Informatique)</li>
+    <li>Les IUT</li>
+</ul>
+
+<p>
+    Si vous êtes intéressés par ces carrières, sachez que c'est un domaine où on fait beaucoup de
+    mathématiques.
+    Pour suivre ces formations, il est conseillé de prendre aussi la spécialité mathématiques en première,
+    et de
+    continuer en terminale avec la spécialité ou bien l'option mathématiques complémentaires.
+
+</p>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+<script src="{{ url_for('static', filename='js/underline.js') }}"></script>
+{% endblock %}

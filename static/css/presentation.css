@@ -7,8 +7,9 @@
 }
 
 /* presentation.html */
-.main-presentation {
+.main {
     display: flex;
+    flex-direction: column;
     text-align: justify;
     gap: 6em;
     margin: 0 20% 0 20%;
