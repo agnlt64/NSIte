@@ -1,13 +1,24 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, flash, request
+import secrets
 
 app = Flask(__name__)
+app.secret_key = secrets.token_urlsafe(16)
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/contact/')
+@app.route('/contact/', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        subject = request.form['subject']
+        if email != "" and name != "" and subject != "":
+            flash("Votre message a bien été envoyé !", category='success')
+        else:
+            flash("Veuillez remplir tous les champs !", category='error')
+        
     return render_template('contact.html')
 
 @app.route('/contrainte/')

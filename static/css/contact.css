@@ -7,10 +7,6 @@
 }
 
 /* contact.html */
-.main {
-    padding: 2em 0;
-}
-
 .container {
     max-width: 60em;
     margin: 0px auto;
@@ -21,6 +17,7 @@
     background-color: #fff;
     padding: 30px 10px;
     border-radius: var(--rounded);
+    margin-top: 1em;
 }
 
 .container form {
@@ -28,7 +25,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     justify-content: space-between;
-    max-width: 600px;
+    max-width: 40em;
 }
 
 .container form input {
@@ -50,4 +47,23 @@
 
 .container form button {
     width: 100%;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    font-size: large;
+}
+
+.success {
+    background-color: #a7ed71;
+    color: #418a02;
+    border: 2px #418a02 solid;
+}
+
+.error {
+    background-color: #ff6645;
+    color: #a41010;
+    border: 2px #a41010 solid;
 }
