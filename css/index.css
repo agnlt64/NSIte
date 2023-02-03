@@ -19,13 +19,6 @@
     margin: 2rem 0 1rem;
 }
 
-.footer{
-    background-color:var(--main-color);
-    color: white;
-    height: 3em;
-    text-align: center;
-}
-
 @media (min-width: 768px) {
     .main-game {
         margin: 0 5% 0 5%;
