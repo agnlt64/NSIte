@@ -113,6 +113,10 @@ input {
     text-decoration: solid;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
 .footer {
     background-color:var(--main-color);
     color: white;
@@ -142,5 +146,17 @@ input {
 @media (max-width: 576px) {
     .title {
         margin-left: 20%;
+    }
+}
+
+@media (max-width: 450px) {
+    .hamburger-menu {
+        display: block;
+        margin-left: auto;
+        padding: 15px 20px;
+    }
+
+    .nav ul {
+        display: none;
     }
 }
