@@ -112,3 +112,10 @@ input {
 .nav ul li a:hover {
     text-decoration: solid;
 }
+
+.footer{
+    background-color:var(--main-color);
+    color: white;
+    height: 3em;
+    text-align: center;
+}
