@@ -14,7 +14,7 @@ function calculerMoyenne(value1, value2, value3) {
 }
 
 function updateMoyenne() {
-    if (Number(maths.value) > 20 || Number(physique.value) > 20 || Number(snt.value) > 20) {
+    if (Number(maths.value) > 20 || Number(physique.value) > 20 || Number(snt.value) > 20 || Number(maths.value) < 0 || Number(physique.value) < 0 || Number(snt.value) < 0) {
         moyenneFinale.toggleAttribute("red");
         moyenneFinale.removeAttribute("orange");
         moyenneFinale.removeAttribute("green");
