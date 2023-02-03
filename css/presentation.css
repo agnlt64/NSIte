@@ -26,13 +26,12 @@
     padding: 10px;
 }
 
-
 .goto-menu {
     background-color: var(--main-color);
     font-size: large;
     height: min-content;
     padding: 2em 3em;
-    margin: 5px 0 0 1em;
+    margin: 10px 0 0 1em;
     border-radius: var(--rounded);
     position: fixed;
 }
@@ -56,7 +55,6 @@
     display: block;
     margin: 0 4em;
 }
-
 
 @keyframes slide {
     50% {
@@ -86,18 +84,30 @@
     background-color: #fff;
 }
 
-
 @media (max-width: 1460px) {
-    .goto-menu {
-        display: none;
-    }
     .content {
-        margin: 0 10% 0 10%;
+        margin: 0 5% 0 25%;
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
+    .content {
+        margin: 0 5% 0 30%;
+    }
+}
+
+@media (max-width: 950px) {
+    .goto-menu {
+        display: none;
+    }
+
     .content {
         margin: 0 5% 0 5%;
+    }
+}
+
+@media (max-width: 750px) {
+    .content {
+        margin: 0 2% 0 2%;
     }
 }

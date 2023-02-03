@@ -5,7 +5,7 @@ let snt = document.getElementById("snt");
 const calculBtn = document.getElementById("calculer-moyenne");
 
 function calculerMoyenne(value1, value2, value3) {
-    let somme = -1;
+    let somme;
     if (value1 !== NaN && value2 !== NaN && value3 !== NaN) {
         somme += value1 + value2 + value3;
         somme /= 3;
