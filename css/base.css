@@ -2,7 +2,7 @@
 
 /* global rules */
 :root {
-    --header-width: 20em;
+    --header-height: 15em;
     --main-color:  #0e89be;
     --accent-color: #0b648a;
     --discret-color: #787a7c;
@@ -62,14 +62,14 @@ input {
 
 .header {
     background-color: var(--main-color);
-    height: var(--header-width);
+    height: var(--header-height);
     color: #fff;
 }
 
 .title {
     display: flex;
     justify-content: center;
-    margin-top: calc(var(--header-width) / 10);
+    margin-top: calc(var(--header-height) / 20);
     font-size: 2em;
 }
 
