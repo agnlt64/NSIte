@@ -56,6 +56,13 @@
     margin: 0 4em;
 }
 
+.btn-up {
+    height: 55px;
+    width: 60px;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
 @keyframes slide {
     50% {
         width: 30%;
@@ -98,6 +105,10 @@
 
 @media (max-width: 950px) {
     .goto-menu {
+        display: none;
+    }
+
+    .btn-up {
         display: none;
     }
 

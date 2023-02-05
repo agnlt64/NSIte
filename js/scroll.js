@@ -6,3 +6,9 @@ function update() {
 }
 
 update();
+
+// go up the page
+const up = document.getElementById("up");
+up.addEventListener('click', () => {
+    window.scrollTo(0, 0);
+})
