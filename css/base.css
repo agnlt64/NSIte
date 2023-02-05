@@ -9,8 +9,13 @@
     --rounded: 8px;
 }
 
+@font-face {
+    font-family: "Pacaembu";
+    src: url("PacaembuVar-subset.woff2");
+}
+
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Pacaembu", sans-serif;
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
@@ -118,6 +123,9 @@ input {
 }
 
 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--main-color);
     color: white;
     height: 3em;
@@ -126,9 +134,7 @@ input {
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 1em;
 }
 
 .footer-sticky {
