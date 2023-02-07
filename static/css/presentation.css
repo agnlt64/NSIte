@@ -12,15 +12,27 @@
     flex-direction: column;
     text-align: justify;
     gap: 6em;
-    margin: 0 20% 0 20%;
 }
+
+.content {
+    margin: 0 10% 0 20%;
+    white-space: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: large;
+}
+
+.content ul{
+    padding: 10px;
+} 
 
 .goto-menu {
     background-color: var(--main-color);
     font-size: large;
     height: min-content;
     padding:2em 3em;
-    margin: 1em 0 0 -17%;
+    margin: 10px 0 0 1em;
     border-radius: var(--rounded);
     position: fixed;
 }
@@ -43,6 +55,13 @@
     content: "";
     display: block;
     margin: 0 4em;
+}
+
+.btn-up {
+    height: 55px;
+    width: 60px;
+    margin-left: auto;
+    margin-bottom: 10px;
 }
 
 @keyframes slide {
