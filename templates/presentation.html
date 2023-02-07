@@ -6,6 +6,7 @@ Présentation de la spécialité NSI
 
 {% block style %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/presentation.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 {% endblock %}
 
 {% block nav_title %}
@@ -174,7 +175,14 @@ Présentation de la spécialité NSI
         continuer en terminale avec la spécialité ou bien l'option mathématiques complémentaires.
     
     </p>
+    <button id="up" class="btn btn-up">
+        <span class="up fa fa-chevron-up"></span>
+    </button>
 </section>
+{% endblock %}
+
+{% block footer %}
+<footer class="footer">Site de Présentation - <strong>NSI</strong> - élèves du Saint-Esprit</footer>
 {% endblock %}
 
 {% block scripts %}
