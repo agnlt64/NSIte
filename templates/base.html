@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='media/nsi-logo.ico') }}" type="image/x-icon">
     {% block style %} {% endblock %}
 </head>
 
@@ -27,9 +28,16 @@
                     <a href="/contact/">Contact</a>
                 </li>
                 <li>
-                    <a href="/contrainte/">Page contrainte</a>
+                    <a href="/moyenne/">Page contrainte</a>
                 </li>
             </ul>
+            <a href="#" class="hamburger-menu" id="hamburger-menu">
+                <svg viewBox="0 0 100 80" width="40" height="40" fill="#fff">
+                    <rect width="100" height="20"></rect>
+                    <rect y="30" width="100" height="20"></rect>
+                    <rect y="60" width="100" height="20"></rect>
+                  </svg>
+            </a>
         </nav>
         <div class="title">
             <h1>{% block nav_title %}{% endblock %}</h1>

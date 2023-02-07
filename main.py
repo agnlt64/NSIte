@@ -21,9 +21,9 @@ def contact():
         
     return render_template('contact.html')
 
-@app.route('/contrainte/')
+@app.route('/moyenne/')
 def contrainte():
-    return render_template('contrainte.html')
+    return render_template('moyenne.html')
 
 @app.route('/presentation/')
 def presentation():

@@ -49,6 +49,12 @@
     width: 100%;
 }
 
+@media (max-width: 900px){
+    .container form input{
+        width: 100%;
+    }
+}
+
 .message {
     display: flex;
     justify-content: center;

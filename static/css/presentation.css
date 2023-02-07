@@ -72,3 +72,36 @@
     margin-left: 10px;
     background-color: #fff;
 }
+
+
+@media (max-width: 1460px) {
+    .content {
+        margin: 0 5% 0 25%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .content {
+        margin: 0 5% 0 30%;
+    }
+}
+
+@media (max-width: 950px) {
+    .goto-menu {
+        display: none;
+    }
+
+    .btn-up {
+        display: none;
+    }
+
+    .content {
+        margin: 0 5% 0 5%;
+    }
+}
+
+@media (max-width: 750px) {
+    .content {
+        margin: 0 2% 0 2%;
+    }
+}
