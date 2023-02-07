@@ -52,10 +52,3 @@
 .moyenne[green] {
     color: var(--green-color);
 }
-
-.footer{
-    background-color:var(--main-color);
-    color: white;
-    height: 3em;
-    text-align: center;
-}
