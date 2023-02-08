@@ -6,7 +6,7 @@ Site de présentation de la spécialité NSI
 git clone -b nsite-flask https://github.com/NSIte.git nsite-flask
 cd nsite-flask
 python -m venv .env
-.env\scripts\Activate.ps1
+.env\Scripts\Activate.ps1
 pip install -r requirements.txt
 python main.py
 ```
@@ -16,7 +16,7 @@ python main.py
 git clone -b nsite-flask https://github.com/ABFStudio/NSIte.git nsite-flask
 cd nsite-flask
 python3 -m venv .env
-source .env/scripts/activate
+source .env/bin/activate
 pip install -r requirements.txt
 python main.py
 ```
