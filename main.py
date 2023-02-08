@@ -1,5 +1,6 @@
 from flask import Flask, render_template, flash, request
 import secrets
+import socket
 
 app = Flask(__name__)
 app.secret_key = secrets.token_urlsafe(16)
@@ -29,4 +30,4 @@ def contrainte():
 def presentation():
     return render_template('presentation.html')
 
-app.run(debug=True, port=8080)
+app.run(debug=True, port=8080, host=socket.gethostbyname(socket.gethostname()))

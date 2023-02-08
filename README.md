@@ -13,7 +13,7 @@ python main.py
 
 ## macOS/Linux
 ```
-git clone -b nsite-flask https://github.com/NSIte.git nsite-flask
+git clone -b nsite-flask https://github.com/ABFStudio/NSIte.git nsite-flask
 cd nsite-flask
 python3 -m venv .env
 source .env/scripts/activate
