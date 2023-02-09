@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, flash, request
 import secrets
+from .mail import send_mail
 
 views = Blueprint('views', __name__)
 views.secret_key = secrets.token_urlsafe(16)
@@ -15,7 +16,7 @@ def contact():
         email = request.form['email']
         subject = request.form['subject']
         body = request.form['message']
-        if email != "" and name != "" and subject != "":
+        if email != "" and name != "" and subject != "" and send_mail(name, email, subject, body):
             flash("Votre message a bien été envoyé !", category='success')
         else:
             flash("Une erreur est survenue !", category='error')
