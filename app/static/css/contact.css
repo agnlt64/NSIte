@@ -73,3 +73,16 @@
     color: #a41010;
     border: 2px #a41010 solid;
 }
+
+@media (max-width: 450px) {
+    .container {
+        padding: 2em 3em;
+    }
+    .container form {
+        width: 20em;
+    }
+
+    .container textarea {
+        font-size:medium;
+    }
+}

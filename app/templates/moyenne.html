@@ -9,18 +9,18 @@ Calculez votre moyenne
 {% endblock %}
 
 {% block nav_title %}
-Contrainte
+Moyenne
 {% endblock %}
 
 {% block content %}
-<h3 class="subtitle">Rentrez vos notes dans chaque catégorie pour vérifier si vous êtes aptes à rentrer en classe de NSI.</h3>
+<h3 class="subtitle">Rentrez vos moyennes dans chaque matière pour vérifier si vous êtes apte à rentrer en classe de NSI.</h3>
 <div class="form">
     <label for="maths">Mathématiques</label>
-    <input type="text" name="maths" id="maths" placeholder="Moyenne de maths..." required>
+    <input type="number" name="maths" id="maths" placeholder="Moyenne de maths..." required>
     <label for="physique">Physique Chimie</label>
-    <input type="text" name="physique" id="physique" placeholder="Moyenne de physique..." required>
+    <input type="number" name="physique" id="physique" placeholder="Moyenne de physique..." required>
     <label for="snt">Sciences Numériques et Technologiques</label>
-    <input type="text" name="snt" id="snt" placeholder="Moyenne de SNT" required>
+    <input type="number" name="snt" id="snt" placeholder="Moyenne de SNT" required>
     <button class="btn" id="calculer-moyenne">Calculer la moyenne</button>
 </div>
 <div id="moyenne" class="moyenne"></div>
@@ -32,4 +32,5 @@ Contrainte
 
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script src="{{ url_for('static', filename='js/responsive.js') }}"></script>
 {% endblock %}

@@ -9,7 +9,7 @@ Contactez-nous
 {% endblock %}
 
 {% block nav_title %}
-Contactez-nous
+Contact
 {% endblock %}
 
 {% block content %}
@@ -21,7 +21,7 @@ Contactez-nous
 <div class="container">
     <form action="" method="post" autocomplete="off">
         <input class="field" type="text" name="name" placeholder="Entrez votre nom...">
-        <input class="field" type="text" name="email" placeholder="Entrez votre mail...">
+        <input class="field" type="email" name="email" placeholder="Entrez votre mail...">
         <input class="field" type="text" name="subject" placeholder="Objet du message...">
         <textarea name="message" placeholder="Entrez votre message..."></textarea>
         <button type="submit" class="btn">Envoyer</button>
@@ -31,4 +31,8 @@ Contactez-nous
 
 {% block footer %}
 <footer class="footer">Site de Présentation - <strong>NSI</strong> - élèves du Saint-Esprit</footer>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/responsive.js') }}"></script>
 {% endblock %}

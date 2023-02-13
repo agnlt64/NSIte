@@ -40,10 +40,14 @@
     background-color: #0a58ca;
 }
 
-.btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.demo {
+    padding: 0 0 0 2.5rem;
+}
+
+@media (max-width: 576px) {
+    .demo {
+        padding: 0 0 0 1.5rem;
+    }
 }
 
 .replay_button {
@@ -65,9 +69,6 @@
 .replay_button:active {
     transform: scale(0.93);
 }
-
-
-
 
 /* glow button */
 .glow-button {
