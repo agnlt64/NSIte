@@ -1,5 +1,5 @@
 :root {
-    --header-height: 15em;
+    --header-width: 20em;
     --main-color:  #0e89be;
     --accent-color: #0b648a;
     --discret-color: #787a7c;
@@ -9,6 +9,7 @@
 /* presentation.html */
 .main-presentation {
     display: flex;
+    flex-direction: column;
     text-align: justify;
     gap: 6em;
 }
@@ -24,13 +25,13 @@
 
 .content ul{
     padding: 10px;
-}
+} 
 
 .goto-menu {
     background-color: var(--main-color);
     font-size: large;
     height: min-content;
-    padding: 2em 3em;
+    padding:2em 3em;
     margin: 10px 0 0 1em;
     border-radius: var(--rounded);
     position: fixed;
@@ -90,6 +91,7 @@
     margin-left: 10px;
     background-color: #fff;
 }
+
 
 @media (max-width: 1460px) {
     .content {

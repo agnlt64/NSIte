@@ -7,10 +7,6 @@
 }
 
 /* contact.html */
-.contact {
-    padding: 2em 0;
-}
-
 .container {
     max-width: 60em;
     margin: 0px auto;
@@ -21,14 +17,14 @@
     background-color: #fff;
     padding: 30px 10px;
     border-radius: var(--rounded);
+    margin-top: 1em;
 }
 
 .container form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    justify-content: space-between;
-    max-width: 600px;
+    max-width: 40em;
 }
 
 .container form input {
@@ -55,5 +51,18 @@
 @media (max-width: 900px){
     .container form input{
         width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        padding: 2em 3em;
+    }
+    .container form {
+        width: 20em;
+    }
+
+    .container textarea {
+        font-size:medium;
     }
 }

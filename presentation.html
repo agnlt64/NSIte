@@ -16,7 +16,7 @@
             <div class="filled"></div>
         </div>
         <nav class="nav">
-            <ul>
+            <ul id="menu" style="display: none;">
                 <li>
                     <a href="index.html">Accueil</a>
                 </li>
@@ -30,9 +30,16 @@
                     <a href="moyenne.html">Moyenne</a>
                 </li>
             </ul>
+            <a href="#" class="hamburger-menu" id="hamburger-menu">
+                <svg viewBox="0 0 100 80" width="40" height="40" fill="#fff">
+                    <rect width="100" height="20"></rect>
+                    <rect y="30" width="100" height="20"></rect>
+                    <rect y="60" width="100" height="20"></rect>
+                  </svg>
+            </a>
         </nav>
-        <div class="title">
-            <h1>Présentation de la spécialité NSI</h1>
+        <div class="title" id="title">
+            <h1>Présentation</h1>
         </div>
     </header>
     
@@ -207,4 +214,5 @@
 </body>
 <script src="js/scroll.js"></script>
 <script src="js/underline.js"></script>
+<script src="js/responsive.js"></script>
 </html>
