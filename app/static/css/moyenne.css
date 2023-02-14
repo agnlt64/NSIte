@@ -6,12 +6,12 @@
     --rounded: 8px;
 }
 
-/* contrainte.html */
+/* moyenne.html */
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em
+    gap: 1em;
 }
 
 .form {

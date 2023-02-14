@@ -8,6 +8,10 @@ hamburgerMenu.addEventListener("click", () => {
     menu.style.display == "flex" ? title.style.display = "none" : title.style.display = "flex"
 })
 
+if (window.innerWidth > 450) {
+    menu.style.display = "flex"
+}
+
 for(f of footers) {
     f.className = "footer"
 }

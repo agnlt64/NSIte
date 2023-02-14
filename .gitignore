@@ -1,3 +1,4 @@
 .env
 .vscode
 app/__pycache__
+todo.txt
