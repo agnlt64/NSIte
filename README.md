@@ -3,8 +3,8 @@ Site de présentation de la spécialité NSI
 
 ## Windows
 ```
-git clone -b nsite-flask https://github.com/NSIte.git nsite-flask
-cd nsite-flask
+git clone -b nsite-flask https://github.com/ABFStudio/NSIte.git
+cd NSIte
 python -m venv .env
 .env\Scripts\Activate.ps1
 pip install -r requirements.txt
