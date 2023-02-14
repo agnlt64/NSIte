@@ -164,6 +164,7 @@ input {
     }
 
     .nav ul {
+        display: none;
         flex-direction: column;
         align-items: center;
         margin-left: 3rem;
@@ -172,5 +173,17 @@ input {
         border-radius: var(--rounded);
         margin-top: 0.5rem;
         width: 40rem;
+    }
+}
+
+@media (min-width: 450px) {
+    .nav ul {
+        display: flex;
+    }
+}
+
+@media (min-width: 450px) {
+    .title {
+        display: flex;
     }
 }

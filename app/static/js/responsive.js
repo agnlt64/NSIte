@@ -1,6 +1,5 @@
 const hamburgerMenu = document.getElementById("hamburger-menu")
 const menu = document.getElementById("menu")
-menu.style.display = "none"
 const title = document.getElementById("title")
 const footers = document.getElementsByTagName("footer")
 
