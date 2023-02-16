@@ -39,6 +39,14 @@
     font-weight: normal;
 }
 
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .moyenne {
     --red-color: #d31a00;
     --orange-color: #f5c400;
