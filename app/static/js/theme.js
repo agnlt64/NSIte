@@ -1,13 +1,6 @@
 const themeSwitcher = document.getElementById('theme-switcher')
 const themeSwitcherContainer = document.getElementById("theme")
 
-if (window.innerWidth > 450) {
-    themeSwitcherContainer.style.marginRight = `${window.innerWidth / 150}%`
-}
-else {
-    themeSwitcherContainer.style.marginRight = `${window.innerWidth / 10}%`
-}
-
 function storeTheme(theme) {
     localStorage.setItem("currentTheme", theme)
 }
