@@ -17,6 +17,7 @@ Moyenne
 <div class="form">
     <label for="maths">Mathématiques</label>
     <input type="number"
+           class="input"
            name="maths"
            id="maths"
            placeholder="Moyenne de maths..."
@@ -24,6 +25,7 @@ Moyenne
     >
     <label for="physique">Physique Chimie</label>
     <input type="number"
+           class="input"
            name="physique"
            id="physique"
            placeholder="Moyenne de physique..."
@@ -31,6 +33,7 @@ Moyenne
     >
     <label for="snt">Sciences Numériques et Technologiques</label>
     <input type="number"
+           class="input"
            name="snt"
            id="snt"
            placeholder="Moyenne de SNT"
@@ -41,11 +44,6 @@ Moyenne
 <div id="moyenne" class="moyenne"></div>
 {% endblock %}
 
-{% block footer %}
-<footer class="footer-sticky">Site de Présentation - <strong>NSI</strong> - élèves du Saint-Esprit</footer>
-{% endblock %}
-
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/index.js') }}"></script>
-<script src="{{ url_for('static', filename='js/responsive.js') }}"></script>
 {% endblock %}

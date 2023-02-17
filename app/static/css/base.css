@@ -39,7 +39,7 @@ a {
     color: #fff;
 }
 
-input {
+.input {
     border-radius: calc(var(--rounded) / 2);
     outline: none;
     border: 1px solid var(--discret-color);
@@ -215,6 +215,27 @@ input {
 
 .nav ul li a:hover {
     text-decoration: solid;
+}
+
+.search-container {
+    display: flex;
+    margin: 1.6rem 0 0 1.5rem;
+    gap: 5px;
+}
+
+.search-container svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.search {
+    width: 10rem;
+    height: 1.5rem;
+    padding: 5px 20px;
+    border-radius: 2rem;
+    outline: none;
+    border: 1px var(--discret-color) solid;
 }
 
 .hamburger-menu {
