@@ -13,6 +13,7 @@ hamburgerMenu.addEventListener("click", () => {
 settingsMenu.addEventListener('click', () => {
     themeSwitcherContainer.style.display == "none" ? themeSwitcherContainer.style.display = "block" : themeSwitcherContainer.style.display = "none"
     themeSwitcherContainer.style.display == "block" ? menu.style.display = "none" : menu.style.display = "none"
+    themeSwitcherContainer.style.display == "block" ? title.style.display = "flex" : title.style.display = "flex"
 })
 
 if (window.innerWidth > 450) {

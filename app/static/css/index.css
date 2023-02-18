@@ -1,51 +1,130 @@
 :root {
-    --header-width: 20em;
-    --main-color:  #0e89be;
+    --header-height: 15em;
+    --main-color: #0e89be;
     --accent-color: #0b648a;
     --discret-color: #787a7c;
     --rounded: 8px;
     --light: #efe9e9;
-    --color-light: #000;
-    --color-dark: #a2a5a6;
+    --color-light: #171515;
     --dark: #29292f;
-    --dark-project: #0dcaf0;
-    --light-project: #0a8ca7;
+    --color-dark: #a2a5a6;
 }
 
 /* index.html */
-/* see game.css for more styling */
 .main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0 10% 0 10%;
+    text-align: justify;
+    gap: 6em;
 }
 
-.project-title {
-    margin: 0.5rem 0 1rem;
-    color: var(--dark-project);
+.content {
+    margin: 0 10% 0 20%;
+    white-space: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: large;
 }
 
-body[light] .project-title {
-    margin: 0.5rem 0 1rem;
-    color: var(--light-project);
+.content ul{
+    padding: 10px;
+} 
+
+.goto-menu {
+    background-color: var(--main-color);
+    font-size: large;
+    height: min-content;
+    padding:2em 3em;
+    margin: 10px 0 0 1em;
+    border-radius: var(--rounded);
+    position: fixed;
 }
 
-@media (max-width: 1100px) {
-    .main {
+.goto-menu ul li {
+    list-style: none;
+    padding: 0.5em;
+    transition: 0.2s;
+}
+
+.goto-menu ul li:hover {
+    transform: translateX(-15px);
+}
+
+.goto-menu ul li a {
+    text-decoration: none;
+}
+
+.goto-menu ul li a::after {
+    content: "";
+    display: block;
+    margin: 0 4em;
+}
+
+.btn-up {
+    height: 55px;
+    width: 60px;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+@keyframes slide {
+    50% {
+        width: 30%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes unslide {
+    0% {
+        width: 60%;
+    }
+    50% {
+        width: 30%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.line {
+    height: 2px;
+    width: 0;
+    margin-left: 10px;
+    background-color: #fff;
+}
+
+
+@media (max-width: 1460px) {
+    .content {
+        margin: 0 5% 0 25%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .content {
+        margin: 0 5% 0 30%;
+    }
+}
+
+@media (max-width: 950px) {
+    .goto-menu {
+        display: none;
+    }
+
+    .btn-up {
+        display: none;
+    }
+
+    .content {
         margin: 0 5% 0 5%;
     }
 }
 
-@media (max-width: 768px) {
-    .main {
-        margin: 0;
-    }
-}
-
-@media (max-width: 450px) {
-    .video {
-        width: 350px;
-        height: 250px;
+@media (max-width: 750px) {
+    .content {
+        margin: 0 2% 0 2%;
     }
 }

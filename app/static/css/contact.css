@@ -1,11 +1,14 @@
 :root {
-    --header-width: 20em;
-    --main-color:  #0e89be;
+    --header-height: 15em;
+    --main-color: #0e89be;
     --accent-color: #0b648a;
     --discret-color: #787a7c;
     --rounded: 8px;
+    --light: #efe9e9;
+    --color-light: #171515;
+    --dark: #29292f;
+    --color-dark: #a2a5a6;
 }
-
 /* contact.html */
 .container {
     max-width: 60em;

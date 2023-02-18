@@ -292,16 +292,18 @@ a {
     .theme {
         display: none;
         position: absolute;
-        margin-right: 30px;
+        margin-right: 6rem;
     }
 
-    .theme-switch__label::before,
+    .theme-switch__label::before{
+        font-size: 4rem;
+    }
+
     .theme-switch__label::after {
         font-size: 3rem;
     }
 
     .nav ul {
-        display: none;
         flex-direction: column;
         align-items: center;
         margin-left: 0.5rem;
@@ -310,5 +312,9 @@ a {
         border-radius: var(--rounded);
         margin-top: 0.5rem;
         width: 40rem;
+    }
+
+    .search-container {
+        display: none;
     }
 }

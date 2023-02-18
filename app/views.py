@@ -9,7 +9,7 @@ views = Blueprint('views', __name__)
 views.secret_key = secrets.token_urlsafe(16)
 
 PORT = 8080
-LOCAL_URL = f'http://{socket.gethostbyname(socket.gethostname())}:{PORT}/presentation/'
+LOCAL_URL = f'http://{socket.gethostbyname(socket.gethostname())}:{PORT}/'
 
 def remove_html(text: str):
     soup = BeautifulSoup(text, 'html.parser')
@@ -37,13 +37,13 @@ def contact():
 def contrainte():
     return render_template('moyenne.html')
 
-@views.route('/presentation/')
+@views.route('/nos-projets/')
 def presentation():
-    return render_template('presentation.html')
+    return render_template('projets.html')
 
 @views.route('/search-results/', methods=['GET', 'POST'])
 def search_results():
-    link = '/presentation/'
+    link = '/#details'
     page = 'Présentation'
     search_results = set()
     if request.method == 'POST':
