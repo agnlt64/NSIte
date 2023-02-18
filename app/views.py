@@ -1,19 +1,26 @@
-from flask import Blueprint, render_template, flash, request
-from .mail import send_mail
+# builtins
 import secrets
 import requests
 import socket
+
+# dependencies
+from flask import Blueprint, render_template, flash, request
 from bs4 import BeautifulSoup
+
+# local files
+from .mail import send_mail, send_mail_to_admin
 
 views = Blueprint('views', __name__)
 views.secret_key = secrets.token_urlsafe(16)
 
 PORT = 8080
-LOCAL_URL = f'http://{socket.gethostbyname(socket.gethostname())}:{PORT}/'
+HOST = socket.gethostname()
+FETCH_LOCAL_URL = f'http://{socket.gethostbyname(HOST)}:{PORT}/'
 
-def remove_html(text: str):
+def parse_search_page(text: str):
     soup = BeautifulSoup(text, 'html.parser')
-    return soup.get_text()
+    all_sections = soup.find_all(name='h3')
+    return soup.get_text(), all_sections
 
 @views.route('/')
 def index():
@@ -26,11 +33,13 @@ def contact():
         email = request.form['email']
         subject = request.form['subject']
         body = request.form['message']
-        if email != "" and name != "" and subject != "" and send_mail(name, email, subject, body):
-            flash("Votre message a bien été envoyé !", category='success')
+        if email != "" and name != "" and subject != "":
+            if send_mail(name, email, subject, body) and send_mail_to_admin(subject, body, name, email):
+                flash('Votre message a bien été envoyé !', category='success')
+            else:
+                flash('Une erreur est survenue !', category='error')
         else:
-            flash("Une erreur est survenue !", category='error')
-        
+            flash('Veuillez remplir tous les champs !', category='error')
     return render_template('contact.html')
 
 @views.route('/moyenne/')
@@ -48,8 +57,9 @@ def search_results():
     search_results = set()
     if request.method == 'POST':
         search = request.form['search']
-        presentation_page_response = requests.get(LOCAL_URL)
-        presentation_page_text = remove_html(presentation_page_response.text).split()
+        presentation_page_response = requests.get(FETCH_LOCAL_URL)
+        presentation_page_text, sections = parse_search_page(presentation_page_response.text)
+        presentation_page_text = presentation_page_text.split()
         for word in presentation_page_text:
             if search.lower() in word:
                 search_results.add(word)
