@@ -10,12 +10,17 @@
     --color-dark: #a2a5a6;
 }
 
+body[light] .search-link {
+    color: var(--color-light);
+}
+
 .search-results-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .failed {

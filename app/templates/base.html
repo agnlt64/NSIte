@@ -33,16 +33,16 @@
                 </svg>
             </a>
             <ul id="menu" style="display: none;">
-                <li>
+                <li class="animated-link">
                     <a href="/">Accueil</a>
                 </li>
-                <li>
+                <li class="animated-link">
                     <a href="/nos-projets/">Nos projets</a>
                 </li>
-                <li>
+                <li class="animated-link">
                     <a href="/contact/">Contact</a>
                 </li>
-                <li>
+                <li class="animated-link">
                     <a href="/moyenne/">Moyenne</a>
                 </li>
             </ul>
@@ -77,4 +77,5 @@
 {% block scripts %}{% endblock %}
 <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
 <script src="{{ url_for('static', filename='js/responsive.js') }}"></script>
+<script src="{{ url_for('static', filename='js/easteregg.js') }}"></script>
 </html>

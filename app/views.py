@@ -57,6 +57,8 @@ def search_results():
     search_results = set()
     if request.method == 'POST':
         search = request.form['search']
+        if search == '':
+            return render_template('search.html')
         presentation_page_response = requests.get(FETCH_LOCAL_URL)
         presentation_page_text, sections = parse_search_page(presentation_page_response.text)
         presentation_page_text = presentation_page_text.split()

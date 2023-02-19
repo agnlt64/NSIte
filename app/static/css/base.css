@@ -37,6 +37,7 @@ body[light] {
 
 a {
     color: #fff;
+    text-decoration: none;
 }
 
 .input {
@@ -189,23 +190,23 @@ a {
     gap: 2em;
 }
 
-.nav ul li {
+.animated-link {
     list-style: none;
-    transition: 0.2s ease;
+    transition: 0.2s;
 }
 
-.nav ul li::after {
+.animated-link::after {
     content: "";
     display: block;
     height: 2px;
     transition: 0.2s;
 }
 
-.nav ul li:hover::after {
+.animated-link:hover::after {
     background-color: #fff;
 }
 
-.nav ul li:hover {
+.animated-link:hover {
     transform: translateY(-8px);
 }
 

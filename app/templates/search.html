@@ -13,10 +13,12 @@ Résultats de la recherche
 {% endblock %}
 
 {% block content%}
-<div class="search-results-container">
+<div class="search-results-container" id="easter-egg">
     {%  for category, search in get_flashed_messages(with_categories=True) %}
     <div class="search-result">
-        <h3><a href="{{ link }}">{{ page }}</a></h3>
+        <h3  class="animated-link">
+            <a href="{{ link }}">{{ page }}</a>
+        </h3>
         <p class="{{ category }}">{{ search }}</p>
     </div>
     {% endfor %}
