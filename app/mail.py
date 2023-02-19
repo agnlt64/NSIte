@@ -3,25 +3,21 @@ from smtplib import SMTPAuthenticationError
 import datetime
 
 # dependencies
-import yagmail
+from yagmail import SMTP
 
-PORT = 587
-YAG = yagmail.SMTP('jaimelesfraisesbleues@gmail.com', "oxvdwydiiunywnou")
-CURRENT = datetime.datetime.now()
+_ADMIN_MAIL = 'jaimelesfraisesbleues@gmail.com'
 
-def send_mail(name: str, receiver: str, subject: str, body: str) -> bool:
-    message = f"Votre message a bien été envoyé. Voici un récapitulatif :\nVotre nom : {name}\nVotre message : \n{body}\n\nEnvoyé le {CURRENT.day}/{CURRENT.month}/{CURRENT.year} à {CURRENT.hour}:{CURRENT.minute}"
+def send_mail(name: str, mail: str, subject: str, body: str, send_to_admin: bool=False) -> bool:
+    current = datetime.datetime.now()
+    yag = SMTP(_ADMIN_MAIL, "oxvdwydiiunywnou")
     try:
-        YAG.send(receiver, subject, message)
-        return True
-    except SMTPAuthenticationError:
-        print('Unable to login !')
-        return False
-    
-def send_mail_to_admin(subject: str, body: str, sender_name: str, sender_email: str):
-    try:
-        message = f'{sender_name} ({sender_email})\n\n{body}\n\nEnvoyé le {CURRENT.day}/{CURRENT.month}/{CURRENT.year} à {CURRENT.hour}:{CURRENT.minute}'
-        YAG.send('jaimelesfraisesbleues@gmail.com', subject, message)
+        if not send_to_admin:
+            send_to = mail
+            message = f"Votre message a bien été envoyé. Voici un récapitulatif :\nVotre nom : {name}\nVotre message : \n{body}\n\nEnvoyé le {current.day}/{current.month}/{current.year} à {current.hour}:{current.minute}"
+        else:
+            send_to = _ADMIN_MAIL
+            message = f'{name} ({mail})\n\n{body}\n\nEnvoyé le {current.day}/{current.month}/{current.year} à {current.hour}:{current.minute}'
+        yag.send(send_to, subject, message)
         return True
     except SMTPAuthenticationError:
         print('Unable to login !')

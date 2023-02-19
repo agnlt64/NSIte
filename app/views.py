@@ -8,7 +8,7 @@ from flask import Blueprint, render_template, flash, request
 from bs4 import BeautifulSoup
 
 # local files
-from .mail import send_mail, send_mail_to_admin
+from .mail import send_mail
 
 views = Blueprint('views', __name__)
 views.secret_key = secrets.token_urlsafe(16)
@@ -34,7 +34,7 @@ def contact():
         subject = request.form['subject']
         body = request.form['message']
         if email != "" and name != "" and subject != "":
-            if send_mail(name, email, subject, body) and send_mail_to_admin(subject, body, name, email):
+            if send_mail(name, email, subject, body) and send_mail(name, email, subject, body, send_to_admin=True):
                 flash('Votre message a bien été envoyé !', category='success')
             else:
                 flash('Une erreur est survenue !', category='error')
