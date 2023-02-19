@@ -2,6 +2,7 @@
 import secrets
 import requests
 import socket
+import re
 
 # dependencies
 from flask import Blueprint, render_template, flash, request
@@ -19,8 +20,8 @@ FETCH_LOCAL_URL = f'http://{socket.gethostbyname(HOST)}:{PORT}/'
 
 def parse_search_page(text: str):
     soup = BeautifulSoup(text, 'html.parser')
-    all_sections = soup.find_all(name='h3')
-    return soup.get_text(), all_sections
+    all_sections = str(soup.find_all(name='h3'))
+    return soup.get_text(), re.findall(r'"([^"]*)"', all_sections)
 
 @views.route('/')
 def index():
@@ -52,20 +53,21 @@ def presentation():
 
 @views.route('/search-results/', methods=['GET', 'POST'])
 def search_results():
-    link = '/#details'
+    link = '/#'
     page = 'Présentation'
     search_results = set()
     if request.method == 'POST':
         search = request.form['search']
         if search == '':
             return render_template('search.html')
-        presentation_page_response = requests.get(FETCH_LOCAL_URL)
-        presentation_page_text, sections = parse_search_page(presentation_page_response.text)
-        presentation_page_text = presentation_page_text.split()
-        for word in presentation_page_text:
+        content_page_response = requests.get(FETCH_LOCAL_URL)
+        content_page_text, sections = parse_search_page(content_page_response.text)
+        print(sections)
+        content_page_text = content_page_text.split()
+        for word in content_page_text:
             if search.lower() in word:
                 search_results.add(word)
-                # flash(f"{presentation_page_text[presentation_page_text.index(word) - 40]} {word} {presentation_page_text[presentation_page_text.index(word) + 40]}")
+        print(search_results)
         for search_result in search_results:
-            flash(f"{search_result}")
-    return render_template('search.html', link=link, page=page)
+            flash(f"{content_page_text[content_page_text.index(search_result) - 1]} {search_result} {content_page_text[content_page_text.index(search_result) + 1]} [...]")
+    return render_template('search.html', link=link+sections[0], page=page)
