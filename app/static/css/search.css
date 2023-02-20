@@ -14,13 +14,20 @@ body[light] .search-link {
     color: var(--color-light);
 }
 
+body[light] .animated-link-light:hover::after {
+    background-color: var(--color-light);
+} 
+
 .search-results-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+.search-result {
+    margin-bottom: 2rem;
 }
 
 .failed {

@@ -62,12 +62,10 @@ def search_results():
             return render_template('search.html')
         content_page_response = requests.get(FETCH_LOCAL_URL)
         content_page_text, sections = parse_search_page(content_page_response.text)
-        print(sections)
         content_page_text = content_page_text.split()
         for word in content_page_text:
             if search.lower() in word:
                 search_results.add(word)
-        print(search_results)
         for search_result in search_results:
-            flash(f"{content_page_text[content_page_text.index(search_result) - 1]} {search_result} {content_page_text[content_page_text.index(search_result) + 1]} [...]")
+            flash(f"[...] {content_page_text[content_page_text.index(search_result) - 1]} {search_result} {content_page_text[content_page_text.index(search_result) + 1]} [...]")
     return render_template('search.html', link=link+sections[0], page=page)

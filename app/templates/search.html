@@ -14,11 +14,11 @@ Résultats de la recherche
 
 {% block content%}
 <div class="search-results-container" id="easter-egg">
-    {%  for category, search in get_flashed_messages(with_categories=True) %}
+    {% for category, search in get_flashed_messages(with_categories=True) %}
+    <h3  class="animated-link animated-link-light">
+        <a href="{{ link }}" class="search-link">Voir l'article</a>
+    </h3>
     <div class="search-result">
-        <h3  class="animated-link">
-            <a href="{{ link }}">{{ page }}</a>
-        </h3>
         <p class="{{ category }}">{{ search }}</p>
     </div>
     {% endfor %}
