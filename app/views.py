@@ -2,7 +2,7 @@
 import secrets
 import requests
 import socket
-import re
+import string
 
 # dependencies
 from flask import Blueprint, render_template, flash, request
@@ -20,8 +20,7 @@ FETCH_LOCAL_URL = f'http://{socket.gethostbyname(HOST)}:{PORT}/'
 
 def parse_search_page(text: str):
     soup = BeautifulSoup(text, 'html.parser')
-    all_sections = str(soup.find_all(name='h3'))
-    return soup.get_text(), re.findall(r'"([^"]*)"', all_sections)
+    return soup.get_text()
 
 @views.route('/')
 def index():
@@ -58,14 +57,15 @@ def search_results():
     search_results = set()
     if request.method == 'POST':
         search = request.form['search']
-        if search == '':
+        if search == '' or len(search) == 1 or search in string.punctuation:
             return render_template('search.html')
-        content_page_response = requests.get(FETCH_LOCAL_URL)
-        content_page_text, sections = parse_search_page(content_page_response.text)
-        content_page_text = content_page_text.split()
-        for word in content_page_text:
-            if search.lower() in word:
+        content_response = requests.get(FETCH_LOCAL_URL)
+        content_text = parse_search_page(content_response.text)
+        content_text = content_text.split()
+        for word in content_text:
+            if search.lower() in word or search.upper() in word or search.capitalize() in word:
                 search_results.add(word)
         for search_result in search_results:
-            flash(f"[...] {content_page_text[content_page_text.index(search_result) - 1]} {search_result} {content_page_text[content_page_text.index(search_result) + 1]} [...]")
-    return render_template('search.html', link=link+sections[0], page=page)
+            search_index = content_text.index(search_result)
+            flash(f"[...] {content_text[search_index - 2]} {content_text[search_index - 1]} {search_result} {content_text[search_index + 1]} {content_text[search_index + 2]} [...]", category=search)
+    return render_template('search.html', link=link, page=page)
