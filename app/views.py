@@ -58,12 +58,9 @@ def presentation():
 
 @views.route('/search-results/', methods=['GET', 'POST'])
 def search_results():
-    link = '/#'
     search_results = set()
     if request.method == 'POST':
         search = request.form['search']
-        if search == '' or len(search) == 1 or search in string.punctuation:
-            return render_template('search.html')
         content_response = requests.get(FETCH_LOCAL_URL)
         content_text = parse_search_page(content_response.text)
         content_text = content_text.split()
@@ -72,13 +69,7 @@ def search_results():
                 search_results.add(word)
         for search_result in search_results:
             search_index = content_text.index(search_result)
-            flash(search_result, category=search)
-        try:
             before_search = f'[...] {content_text[search_index - 2]} {content_text[search_index - 1]}'
             after_search = f'{content_text[search_index + 1]} {content_text[search_index + 2]} [...]'
-        except UnboundLocalError:
-            before_search = ''
-            after_search = ''
-            flash('Aucun résultat ne correspond à votre recherche !', category='failed')
-    return render_template('search.html', link=link, before_search=before_search, after_search=after_search)
-    
+            flash(search_result, category=[search, before_search, after_search])
+    return render_template('search.html', link='/')

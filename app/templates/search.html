@@ -19,10 +19,14 @@ Résultats de la recherche
     <h3  class="animated-link animated-link-light">
         <a href="{{ link }}" class="search-link">Voir l'article</a>
     </h3>
-    {% endif %}
     <div class="search-result">
-        <p>{{ before_search }} <span class="keyword {{ category }}">{{ search }}</span> {{ after_search }}</p>
+        <p>{{ category[1] }} <span class="keyword">{{ search }}</span> {{ category[2] }}</p>
     </div>
+    {% else %}
+    <div class="search-result">
+        <p class="{{ category }}">tets</p>
+    </div>
+    {% endif %}
     {% endfor %}
 </div>
 {% endblock %}

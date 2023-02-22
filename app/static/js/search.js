@@ -1,11 +1,5 @@
-search.addEventListener('input', () => {
-    localStorage.setItem('search', search.value)
-})
+const allKeywords = document.getElementsByClassName('keyword')
 
-function getSearchedWord() {
-    return localStorage.getItem('search')
+for (let i = 0; i < allKeywords.length; i++) {
+    localStorage.setItem(`keyword_${i}`, allKeywords[i].innerHTML)
 }
-
-const searchedWordsList = document.getElementsByClassName(getSearchedWord())
-
-console.log(searchedWordsList)
