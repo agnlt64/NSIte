@@ -15,16 +15,19 @@ views = Blueprint('views', __name__)
 views.secret_key = secrets.token_urlsafe(16)
 
 PORT = 8080
-HOST = socket.gethostname()
-FETCH_LOCAL_URL = f'http://{socket.gethostbyname(HOST)}:{PORT}/'
+LOCAL_IP = '127.0.0.1'
+FETCH_LOCAL_URL = f'http://{LOCAL_IP}:{PORT}'
+
 
 def parse_search_page(text: str):
     soup = BeautifulSoup(text, 'html.parser')
     return soup.get_text()
 
+
 @views.route('/')
 def index():
     return render_template('index.html')
+
 
 @views.route('/contact/', methods=['GET', 'POST'])
 def contact():
@@ -42,18 +45,20 @@ def contact():
             flash('Veuillez remplir tous les champs !', category='error')
     return render_template('contact.html')
 
+
 @views.route('/moyenne/')
 def contrainte():
     return render_template('moyenne.html')
+
 
 @views.route('/nos-projets/')
 def presentation():
     return render_template('projets.html')
 
+
 @views.route('/search-results/', methods=['GET', 'POST'])
 def search_results():
     link = '/#'
-    page = 'Présentation'
     search_results = set()
     if request.method == 'POST':
         search = request.form['search']
@@ -67,5 +72,13 @@ def search_results():
                 search_results.add(word)
         for search_result in search_results:
             search_index = content_text.index(search_result)
-            flash(f"[...] {content_text[search_index - 2]} {content_text[search_index - 1]} {search_result} {content_text[search_index + 1]} {content_text[search_index + 2]} [...]", category=search)
-    return render_template('search.html', link=link, page=page)
+            flash(search_result, category=search)
+        try:
+            before_search = f'[...] {content_text[search_index - 2]} {content_text[search_index - 1]}'
+            after_search = f'{content_text[search_index + 1]} {content_text[search_index + 2]} [...]'
+        except UnboundLocalError:
+            before_search = ''
+            after_search = ''
+            flash('Aucun résultat ne correspond à votre recherche !', category='failed')
+    return render_template('search.html', link=link, before_search=before_search, after_search=after_search)
+    

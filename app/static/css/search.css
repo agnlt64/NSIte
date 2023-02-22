@@ -30,7 +30,17 @@ body[light] .animated-link-light:hover::after {
     margin-bottom: 2rem;
 }
 
+.keyword {
+    background-color: #f4fa72;
+    color: #000;
+}
+
 .failed {
+    background-color: var(--dark);
     color: red;
-    font-size: 5rem;
+    font-size: 3rem;
+}
+
+body[light] .failed {
+    background-color: var(--light);
 }
