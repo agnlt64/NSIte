@@ -1,21 +1,20 @@
-const allKeywords = document.getElementsByClassName('keyword')
-
-for (let i = 0; i < allKeywords.length; i++) {
-    localStorage.setItem(`keyword_${i}`, allKeywords[i].innerHTML)
-}
+let allKeywords = document.getElementsByClassName('keyword')
 
 // thanks chatGPT ^^
 function stripHTMLTags(str) {
-    return str.replace(/<[^>]*>/g, '').split(' ').slice(1000).filter(Boolean);
+    return str.replace(/<[^>]*>/g, '').split(' ').filter(Boolean);
 }
 
-const searchPage = fetch('http://127.0.0.1:8080/')
-    .then(response => response.text())
-    .then(data => {
-        searchArray = stripHTMLTags(data)
-        for (word of allKeywords) {
-            if (searchArray.includes(word.innerHTML)) {
-                console.log('included')
-            }
-        }
-    })
+if (location.pathname === '/search-results/') {
+    // get all the ids of the returned keywords
+    let ids = new Array()
+    for (id of allKeywords) {
+        ids.push(id.innerHTML)
+        document.getElementById(id.innerHTML)
+    }
+} else if (location.pathname === '/') {
+    const allSpans = document.getElementsByTagName('span')
+    for (s of allSpans) {
+        console.log(s.id)
+    }
+}

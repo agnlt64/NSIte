@@ -15,21 +15,16 @@ Résultats de la recherche
 {% block content%}
 <div class="search-results-container" id="easter-egg">
     {% for category, search in get_flashed_messages(with_categories=True) %}
-    {% if category != 'failed' %}
     <h3  class="animated-link animated-link-light">
         <a href="{{ link }}" class="search-link">Voir l'article</a>
     </h3>
     <div class="search-result">
-        <p>{{ category[1] }} <span class="keyword">{{ search }}</span> {{ category[2] }}</p>
+        <p>{{ category[1] }} <span class="keyword" id="{{ search }}">{{ search }}</span> {{ category[2] }}</p>
     </div>
-    {% else %}
-    <div class="search-result">
-        <p class="{{ category }}">tets</p>
-    </div>
-    {% endif %}
     {% endfor %}
 </div>
 {% endblock %}
 
 {% block scripts %}
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
 {% endblock %}

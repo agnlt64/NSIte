@@ -73,6 +73,7 @@ def search_results():
                 before_search = f'[...] {content_text[search_index - 2]} {content_text[search_index - 1]}'
                 after_search = f'{content_text[search_index + 1]} {content_text[search_index + 2]} [...]'
             except IndexError:
-                print('index error')
+                before_search = f'[...] {content_text[search_index - 1]}'
+                after_search = f' [...]'
             flash(search_result, category=[search, before_search, after_search])
     return render_template('search.html', link='/')

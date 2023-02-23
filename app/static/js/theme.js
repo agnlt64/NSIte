@@ -7,7 +7,12 @@ function storeTheme(theme) {
 
 function getTheme() {
     const currentTheme = localStorage.getItem("currentTheme")
-    document.body.toggleAttribute(currentTheme)
+    try {
+        document.body.toggleAttribute(currentTheme)
+    }
+    catch (DOMException) {
+        // we don't actually care
+    }
     if (currentTheme === "light") {
         themeSwitcher.checked = false
     }
