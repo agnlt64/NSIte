@@ -19,9 +19,10 @@ LOCAL_IP = '127.0.0.1'
 FETCH_LOCAL_URL = f'http://{LOCAL_IP}:{PORT}'
 
 
-def parse_search_page(text: str):
+# thanks chatGPT ^^
+def parse_search_page(text: str) -> list[str]:
     soup = BeautifulSoup(text, 'html.parser')
-    return soup.get_text()
+    return soup.get_text().split()
 
 
 @views.route('/')
@@ -63,13 +64,15 @@ def search_results():
         search = request.form['search']
         content_response = requests.get(FETCH_LOCAL_URL)
         content_text = parse_search_page(content_response.text)
-        content_text = content_text.split()
         for word in content_text:
             if search.lower() in word or search.upper() in word or search.capitalize() in word:
                 search_results.add(word)
         for search_result in search_results:
             search_index = content_text.index(search_result)
-            before_search = f'[...] {content_text[search_index - 2]} {content_text[search_index - 1]}'
-            after_search = f'{content_text[search_index + 1]} {content_text[search_index + 2]} [...]'
+            try:
+                before_search = f'[...] {content_text[search_index - 2]} {content_text[search_index - 1]}'
+                after_search = f'{content_text[search_index + 1]} {content_text[search_index + 2]} [...]'
+            except IndexError:
+                print('index error')
             flash(search_result, category=[search, before_search, after_search])
     return render_template('search.html', link='/')

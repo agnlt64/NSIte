@@ -1,6 +1,3 @@
-# builtins
-import socket
-
 # local files
 from app import create_app
 from app.views import PORT, LOCAL_IP
