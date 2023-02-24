@@ -18,7 +18,6 @@ PORT = 8080
 LOCAL_IP = '127.0.0.1'
 FETCH_LOCAL_URL = f'http://{LOCAL_IP}:{PORT}'
 
-
 # thanks chatGPT ^^
 def parse_search_page(text: str) -> list[str]:
     soup = BeautifulSoup(text, 'html.parser')
@@ -57,7 +56,7 @@ def presentation():
     return render_template('projets.html')
 
 
-@views.route('/search-results/', methods=['GET', 'POST'])
+@views.route('/search-results/', methods=['POST'])
 def search_results():
     search_results = set()
     if request.method == 'POST':
