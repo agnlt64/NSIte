@@ -12,10 +12,7 @@
 
 /* index.html */
 .main {
-    display: flex;
-    flex-direction: column;
     text-align: justify;
-    gap: 6em;
 }
 
 .content {
@@ -24,6 +21,10 @@
     flex-direction: column;
     gap: 50px;
     font-size: large;
+}
+
+#first-part{
+    display: flex;
 }
 
 .content ul{
