@@ -256,22 +256,6 @@ a {
     color: white;
     height: 5em;
     text-align: center;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-top: 2rem;
-}
-
-.footer-sticky {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--main-color);
-    color: white;
-    height: 5em;
-    text-align: center;
-    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -313,11 +297,11 @@ a {
     }
 
     .theme-switch__label::before{
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .theme-switch__label::after {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .nav ul {
@@ -331,7 +315,7 @@ a {
         width: 40rem;
     }
 
-    .search-container {
+    .search-container svg {
         display: none;
     }
 }
