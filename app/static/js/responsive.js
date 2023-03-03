@@ -3,6 +3,7 @@ const menu = document.getElementById("menu")
 const title = document.getElementById("title")
 const footers = document.getElementsByTagName("footer")
 const settingsMenu = document.getElementById('settings')
+const imageMobile = document.getElementById('image-mobile')
 
 hamburgerMenu.addEventListener("click", () => {
     menu.style.display == "none" ? menu.style.display = "flex" : menu.style.display = "none"
