@@ -30,6 +30,11 @@
     padding: 10px;
 } 
 
+img{
+    height: 20em;
+    width: 20em;
+    float: right;
+}
 .goto-menu {
     background-color: var(--main-color);
     font-size: large;
