@@ -25,16 +25,21 @@
 
 #first-part{
     display: flex;
+    gap: 2em;
 }
 
+#second-part{
+    margin-top: -4em;
+}
 .content ul{
     padding: 10px;
 } 
 
 img{
-    height: 20em;
-    width: 20em;
+    height: 15em;
+    width: 50em;
     float: right;
+    padding: 8px;
 }
 .goto-menu {
     background-color: var(--main-color);
