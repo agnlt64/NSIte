@@ -20,7 +20,8 @@ if (window.innerWidth > 450) {
     menu.style.display = "flex"
 }
 
-
 for(f of footers) {
-    f.className = "footer"
+    if (location.pathname === '/contact/' || location.pathname === '/moyenne/' || location.pathname === '/search-results/') {
+        f.className = 'footer-sticky'
+    }
 }
