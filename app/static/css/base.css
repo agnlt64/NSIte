@@ -257,6 +257,21 @@ a {
     margin-top: 2rem;
 }
 
+.footer-sticky {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    background-color: var(--main-color);
+    color: white;
+    height: 5em;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 2rem;
+}
+
 @media (max-width: 1100px) {
     .theme {
         margin-right: 11%;
