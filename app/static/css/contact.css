@@ -84,12 +84,13 @@ body[light] .container {
 @media (max-width: 450px) {
     .container {
         padding: 2em 3em;
+        width: fit-content;
     }
     .container form {
         width: 20em;
     }
 
     .container textarea {
-        font-size:medium;
+        font-size: medium;
     }
 }
