@@ -17,13 +17,13 @@ function updateMoyenne() {
     }
     else {
         const moyenne = calculerMoyenne(Number(maths.value), Number(physique.value), Number(snt.value));
-        if (moyenne < 8) {
+        if (moyenne < 10) {
             moyenneFinale.setAttribute("red", true);
             moyenneFinale.removeAttribute("orange");
             moyenneFinale.removeAttribute("green");
             moyenneFinale.innerHTML = "La spécialité NSI vous est vivement déconseillée !";
         }
-        else if (moyenne >= 8 && moyenne < 14) {
+        else if (moyenne >= 10 && moyenne < 14) {
             moyenneFinale.setAttribute("orange", true);
             moyenneFinale.removeAttribute("red");
             moyenneFinale.removeAttribute("green");
