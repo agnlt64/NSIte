@@ -35,16 +35,6 @@ body[light] .animated-link-light:hover::after {
     color: #000;
 }
 
-.failed {
-    background-color: var(--dark);
-    color: red;
-    font-size: 3rem;
-}
-
-body[light] .failed {
-    background-color: var(--light);
-}
-
 @media (max-width: 450px) {
     p {
         font-size: 1em;
