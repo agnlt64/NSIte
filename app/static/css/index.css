@@ -41,6 +41,7 @@ img {
     float: right;
     padding: 8px;
 }
+
 .goto-menu {
     background-color: var(--main-color);
     font-size: large;
@@ -128,6 +129,18 @@ img {
     }
 }
 
+@media (max-width: 1200px) {
+    #first-part {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 40em;
+        height: 20em;
+    }
+}
+
 @media (max-width: 950px) {
     .goto-menu {
         display: none;
@@ -148,12 +161,7 @@ img {
     }
 }
 
-@media (max-width: 450px) {
-    #first-part {
-        flex-direction: column;
-        align-items: center;
-    }
-
+@media (max-width: 800px) {
     img {
         width: 22em;
         height: 15em;

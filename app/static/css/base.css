@@ -307,7 +307,7 @@ a {
     }
 
     .theme-switch__label::before{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .theme-switch__label::after {
