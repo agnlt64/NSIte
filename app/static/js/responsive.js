@@ -25,7 +25,7 @@ if (window.innerWidth > 450) {
 }
 
 for(f of footers) {
-    if (location.pathname === '/contact/' || location.pathname === '/moyenne/') {
+    if (location.pathname === '/contact/' || location.pathname === '/moyenne/' || location.pathname === '/search-results/') {
         f.className = 'footer-sticky'
     }
 }

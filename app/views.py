@@ -56,7 +56,7 @@ def presentation():
     return render_template('projets.html')
 
 
-@views.route('/search-results/', methods=['POST'])
+@views.route('/search-results/', methods=['GET', 'POST'])
 def search_results():
     search_results = set()
     if request.method == 'POST':
