@@ -1,7 +1,4 @@
 const moyenneFinale = document.getElementById("moyenne");
-let maths = document.getElementById("maths");
-let physique = document.getElementById("physique");
-let snt = document.getElementById("snt");
 const calculBtn = document.getElementById("calculer-moyenne");
 
 function calculerMoyenne(value1, value2, value3) {
@@ -9,14 +6,18 @@ function calculerMoyenne(value1, value2, value3) {
 }
 
 function updateMoyenne() {
-    if (Number(maths.value) > 20 || Number(physique.value) > 20 || Number(snt.value) > 20 || Number(maths.value) < 0 || Number(physique.value) < 0 || Number(snt.value) < 0 || maths.value === "" || physique.value === "" || maths.value === "") {
+    let maths = Number(document.getElementById("maths").value);
+    let physique = Number(document.getElementById("physique").value);
+    let snt = Number(document.getElementById("snt").value);
+
+    if (maths > 20 || physique > 20 || snt > 20 || maths < 0 || physique < 0 || snt < 0 || maths === "" || physique === "" || maths === "") {
         moyenneFinale.setAttribute("red", true);
         moyenneFinale.removeAttribute("orange");
         moyenneFinale.removeAttribute("green");
         moyenneFinale.innerHTML = "Valeurs incorrectes !";
     }
     else {
-        const moyenne = calculerMoyenne(Number(maths.value), Number(physique.value), Number(snt.value));
+        const moyenne = calculerMoyenne(maths, physique, snt);
         if (moyenne < 10) {
             moyenneFinale.setAttribute("red", true);
             moyenneFinale.removeAttribute("orange");
