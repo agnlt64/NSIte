@@ -36,12 +36,6 @@ function updateMoyenne() {
             moyenneFinale.removeAttribute("red");
             moyenneFinale.innerHTML = "Vous pouvez y aller les yeux fermés !";
         }
-        else {
-            moyenneFinale.setAttribute("red", true);
-            moyenneFinale.removeAttribute("orange");
-            moyenneFinale.removeAttribute("green");
-            moyenneFinale.innerHTML = "Valeurs incorrectes !";
-        }
     }
 }
 
