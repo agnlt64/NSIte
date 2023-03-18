@@ -1,8 +1,6 @@
 # builtins
 import secrets
 import requests
-import socket
-import string
 
 # dependencies
 from flask import Blueprint, render_template, flash, request
@@ -47,12 +45,12 @@ def contact():
 
 
 @views.route('/moyenne/')
-def contrainte():
+def moyenne():
     return render_template('moyenne.html')
 
 
 @views.route('/nos-projets/')
-def presentation():
+def projets():
     return render_template('projets.html')
 
 
