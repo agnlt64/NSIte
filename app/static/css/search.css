@@ -1,0 +1,42 @@
+:root {
+    --header-height: 15em;
+    --main-color: #0e89be;
+    --accent-color: #0b648a;
+    --discret-color: #787a7c;
+    --rounded: 8px;
+    --light: #fff;
+    --color-light: #171515;
+    --dark: #29292f;
+    --color-dark: #a2a5a6;
+}
+
+body[light] .search-link {
+    color: var(--color-light);
+}
+
+body[light] .animated-link-light:hover::after {
+    background-color: var(--color-light);
+} 
+
+.search-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.search-result {
+    margin-bottom: 2rem;
+}
+
+.keyword {
+    background-color: #f4fa72;
+    color: #000;
+}
+
+@media (max-width: 450px) {
+    p {
+        font-size: 1em;
+    }
+}

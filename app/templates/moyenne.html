@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+Calculez votre moyenne
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/moyenne.css') }}">
+{% endblock %}
+
+{% block nav_title %}
+Moyenne
+{% endblock %}
+
+{% block content %}
+<h3 class="subtitle">Rentrez vos moyennes dans chaque matière pour vérifier si vous êtes apte à rentrer en classe de NSI.</h3>
+<div class="form">
+    <label for="maths">Mathématiques</label>
+    <input type="number"
+           class="input"
+           name="maths"
+           id="maths"
+           placeholder="Moyenne de maths..."
+           required
+    >
+    <label for="physique">Physique Chimie</label>
+    <input type="number"
+           class="input"
+           name="physique"
+           id="physique"
+           placeholder="Moyenne de physique..."
+           required
+    >
+    <label for="snt">Sciences Numériques et Technologiques</label>
+    <input type="number"
+           class="input"
+           name="snt"
+           id="snt"
+           placeholder="Moyenne de SNT"
+           required
+    >
+    <button class="btn" id="calculer-moyenne">Calculer la moyenne</button>
+</div>
+<div id="moyenne" class="moyenne"></div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

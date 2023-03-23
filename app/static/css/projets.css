@@ -4,11 +4,17 @@
     --accent-color: #0b648a;
     --discret-color: #787a7c;
     --rounded: 8px;
+    --light: #fff;
+    --color-light: #000;
+    --color-dark: #a2a5a6;
+    --dark: #29292f;
+    --dark-project: #0dcaf0;
+    --light-project: #0a8ca7;
 }
 
-/* index.html */
-/* see jeu.css for more styling */
-.main-game {
+/* projets.html */
+/* see game.css for more styling */
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +23,12 @@
 
 .project-title {
     margin: 0.5rem 0 1rem;
-    color: #0dcaf0;
+    color: var(--dark-project);
+}
+
+body[light] .project-title {
+    margin: 0.5rem 0 1rem;
+    color: var(--light-project);
 }
 
 @media (max-width: 1100px) {

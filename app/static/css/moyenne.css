@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD:css/moyenne.css
     --header-width: 20em;
     --main-color:  #0e89be;
     --accent-color: #0b648a;
@@ -8,6 +9,21 @@
 
 /* moyenne.html */
 .main-moyenne {
+=======
+    --header-height: 15em;
+    --main-color: #0e89be;
+    --accent-color: #0b648a;
+    --discret-color: #787a7c;
+    --rounded: 8px;
+    --light: #fff;
+    --color-light: #171515;
+    --dark: #29292f;
+    --color-dark: #a2a5a6;
+}
+
+/* moyenne.html */
+.main {
+>>>>>>> nsite-flask:app/static/css/moyenne.css
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,13 +34,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+<<<<<<< HEAD:css/moyenne.css
     max-width: 30em;
+=======
+    width: 30em;
+    height: 20em;
+>>>>>>> nsite-flask:app/static/css/moyenne.css
     margin: 0px auto;
     padding: 2.5em 4em;
     background-color: #fff;
     border-radius: var(--rounded);
 }
 
+<<<<<<< HEAD:css/moyenne.css
+=======
+body[light] .form {
+    background-color: #f6f6f6;
+    border: 1px black solid;
+}
+
+>>>>>>> nsite-flask:app/static/css/moyenne.css
 .form label {
     font-size: large;
     color: #000;
@@ -39,6 +68,18 @@
     font-weight: normal;
 }
 
+<<<<<<< HEAD:css/moyenne.css
+=======
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+>>>>>>> nsite-flask:app/static/css/moyenne.css
 .moyenne {
     --red-color: #d31a00;
     --orange-color: #f5c400;
@@ -61,5 +102,9 @@
 @media (max-width: 450px) {
     .form {
         padding: 2em 3em;
+<<<<<<< HEAD:css/moyenne.css
+=======
+        width: fit-content;
+>>>>>>> nsite-flask:app/static/css/moyenne.css
     }
 }

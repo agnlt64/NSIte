@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contactez-nous
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+{% block nav_title %}
+Contact
+{% endblock %}
+
+{% block content %}
+{%  for category, message in get_flashed_messages(with_categories=True) %}
+<div class="message {{ category }}">
+    <p>{{ message }}</p>
+</div>
+{% endfor %}
+<div class="container">
+    <form action="" method="post">
+        <input class="input" type="text" name="name" placeholder="Entrez votre nom...">
+        <input class="input" type="email" name="email" placeholder="Entrez votre mail...">
+        <input class="input" type="text" name="subject" placeholder="Objet du message...">
+        <textarea name="message" placeholder="Entrez votre message..."></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+    </form>
+</div>
+{% endblock %}

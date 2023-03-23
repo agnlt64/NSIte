@@ -1,31 +1,46 @@
 :root {
-    --header-width: 20em;
-    --main-color:  #0e89be;
+    --header-height: 15em;
+    --main-color: #0e89be;
     --accent-color: #0b648a;
     --discret-color: #787a7c;
     --rounded: 8px;
+    --light: #fff;
+    --color-light: #171515;
+    --dark: #29292f;
+    --color-dark: #a2a5a6;
 }
 
-/* presentation.html */
-.main-presentation {
-    display: flex;
-    flex-direction: column;
+/* index.html */
+.main {
     text-align: justify;
-    gap: 6em;
 }
 
 .content {
     margin: 0 10% 0 20%;
-    white-space: 2em;
     display: flex;
     flex-direction: column;
     gap: 50px;
     font-size: large;
 }
 
+#first-part{
+    display: flex;
+    gap: 2em;
+}
+
+#second-part{
+    margin-top: -4em;
+}
 .content ul{
     padding: 10px;
 } 
+
+img {
+    height: 15em;
+    width: 50em;
+    float: right;
+    padding: 8px;
+}
 
 .goto-menu {
     background-color: var(--main-color);
@@ -92,16 +107,37 @@
     background-color: #fff;
 }
 
-
-@media (max-width: 1460px) {
-    .content {
-        margin: 0 5% 0 25%;
+@media(max-width: 1500px) {
+    #second-part {
+        margin-top: -1em;
     }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1600px) {
+    .content {
+        margin: 0 5% 0 25%;
+    }
+}   
+
+@media (max-width: 1300px) {
     .content {
         margin: 0 5% 0 30%;
+    }
+
+    #second-part {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    #first-part {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 40em;
+        height: 20em;
     }
 }
 
@@ -122,5 +158,12 @@
 @media (max-width: 750px) {
     .content {
         margin: 0 2% 0 2%;
+    }
+}
+
+@media (max-width: 800px) {
+    img {
+        width: 22em;
+        height: 15em;
     }
 }
