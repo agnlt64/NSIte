@@ -9,6 +9,8 @@ const searchBar = document.getElementById('search-container')
 hamburgerMenu.addEventListener("click", () => {
     menu.style.display == "none" ? menu.style.display = "flex" : menu.style.display = "none"
     menu.style.display == "flex" ? title.style.display = "none" : title.style.display = "flex"
+    menu.style.display == "flex" ? themeSwitcherContainer.style.display = "none" : themeSwitcherContainer.style.display = "none"
+    menu.style.display == "flex" ? searchBar.style.display = "none" : searchBar.style.display = "flex"
 })
 
 settingsMenu.addEventListener('click', () => {
