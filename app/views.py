@@ -35,7 +35,7 @@ def contact():
         subject = request.form['subject']
         body = request.form['message']
         if email != "" and name != "" and subject != "":
-            if send_mail(name, email, subject, body) and send_mail(name, email, subject, body, send_to_admin=True):
+            if send_mail(name, email, subject, body):
                 flash('Votre message a bien été envoyé !', category='success')
             else:
                 flash('Une erreur est survenue !', category='error')
