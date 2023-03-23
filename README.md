@@ -13,8 +13,8 @@ python main.py
 
 ## macOS/Linux
 ```
-git clone https://github.com/ABFStudio/NSIte.git nsite-flask
-cd nsite-flask
+git clone https://github.com/ABFStudio/NSIte.git
+cd NSIte
 python3 -m venv .env
 source .env/bin/activate
 pip install -r requirements.txt
