@@ -6,11 +6,11 @@ function calculerMoyenne(value1, value2, value3) {
 }
 
 function updateMoyenne() {
-    let maths = Number(document.getElementById("maths").value);
-    let physique = Number(document.getElementById("physique").value);
-    let snt = Number(document.getElementById("snt").value);
+    let maths = parseFloat(document.getElementById("maths").value);
+    let physique = parseFloat(document.getElementById("physique").value);
+    let snt = parseFloat(document.getElementById("snt").value);
 
-    if (maths > 20 || physique > 20 || snt > 20 || maths < 0 || physique < 0 || snt < 0 || maths === "" || physique === "" || maths === "") {
+    if (maths > 20 || physique > 20 || snt > 20 || maths < 0 || physique < 0 || snt < 0 || snt === "" || physique === "" || maths === "" || physique === NaN || maths === NaN || snt === NaN) {
         moyenneFinale.setAttribute("red", true);
         moyenneFinale.removeAttribute("orange");
         moyenneFinale.removeAttribute("green");

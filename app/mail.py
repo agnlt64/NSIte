@@ -7,7 +7,7 @@ from yagmail import SMTP
 
 _ADMIN_MAIL = 'jaimelesfraisesbleues@gmail.com'
 
-def send_mail(name: str, mail: str, subject: str, body: str, send_to_admin: bool=True) -> bool:
+def send_mail(name: str, mail: str, subject: str, body: str) -> bool:
     current = datetime.datetime.now()
     yag = SMTP(_ADMIN_MAIL, "oxvdwydiiunywnou")
     try:
