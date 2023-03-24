@@ -7,4 +7,7 @@ search.addEventListener('input', () => {
     else if (search.value === 'quoi') {
         document.body.style.backgroundImage = 'url("/static/media/feur.gif")'
     }
+    else if (search.value === 'moi' || search.value === 'zemmour') {
+        document.body.style.backgroundImage = 'url("/static/media/gigachad.jpg")'
+    }
 })
